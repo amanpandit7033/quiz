@@ -1,0 +1,16 @@
+{
+	"compatibility_date": "2025-10-08",
+	"main": "src/index.ts",
+	"name": "quiz",
+	"upload_source_maps": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_id": "6ba011bd-f06c-40ab-8026-31c78987a8cb",
+			"database_name": "quiz_db"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}
