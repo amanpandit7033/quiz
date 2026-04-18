@@ -46,7 +46,6 @@ export function renderHtml(content: string) {
     max-width: 720px;
   }
 
-  /* ====== SCREENS ====== */
   .screen { display: none; animation: fadeIn 0.4s ease; }
   .screen.active { display: block; }
 
@@ -55,7 +54,6 @@ export function renderHtml(content: string) {
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* ====== START SCREEN ====== */
   #start-screen {
     text-align: center;
     padding: 60px 40px;
@@ -66,9 +64,7 @@ export function renderHtml(content: string) {
     box-shadow: var(--shadow-lg);
   }
 
-  #start-screen::before {
-    display: none;
-  }
+  #start-screen::before { display: none; }
 
   .logo {
     font-family: 'Space Mono', monospace;
@@ -104,9 +100,7 @@ export function renderHtml(content: string) {
     flex-wrap: wrap;
   }
 
-  .stat-item {
-    text-align: center;
-  }
+  .stat-item { text-align: center; }
 
   .stat-num {
     font-size: 32px;
@@ -162,7 +156,6 @@ export function renderHtml(content: string) {
     border-color: var(--muted);
   }
 
-  /* ====== INPUTS ====== */
   .input-group {
     margin-bottom: 32px;
     text-align: left;
@@ -198,7 +191,6 @@ export function renderHtml(content: string) {
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
   }
 
-  /* ====== LEADERBOARD TABLE ====== */
   .leaderboard-table {
     width: 100%;
     border-collapse: collapse;
@@ -243,8 +235,6 @@ export function renderHtml(content: string) {
 
   .score-val { color: var(--accent); font-family: 'Space Mono', monospace; font-weight: 700; }
 
-
-  /* ====== QUIZ SCREEN ====== */
   #quiz-screen {
     background: var(--surface);
     border-radius: 24px;
@@ -263,9 +253,7 @@ export function renderHtml(content: string) {
     gap: 16px;
   }
 
-  .progress-wrap {
-    flex: 1;
-  }
+  .progress-wrap { flex: 1; }
 
   .progress-info {
     display: flex;
@@ -297,9 +285,7 @@ export function renderHtml(content: string) {
     white-space: nowrap;
   }
 
-  .quiz-body {
-    padding: 36px 28px;
-  }
+  .quiz-body { padding: 36px 28px; }
 
   .q-num {
     font-family: 'Space Mono', monospace;
@@ -367,26 +353,10 @@ export function renderHtml(content: string) {
     color: #fff;
   }
 
-  .option.correct {
-    border-color: var(--green);
-    background: rgba(16,185,129,0.1);
-  }
-
-  .option.correct .opt-letter {
-    background: var(--green);
-    color: #fff;
-  }
-
-  .option.wrong {
-    border-color: var(--red);
-    background: rgba(239,68,68,0.1);
-  }
-
-  .option.wrong .opt-letter {
-    background: var(--red);
-    color: #fff;
-  }
-
+  .option.correct { border-color: var(--green); background: rgba(16,185,129,0.1); }
+  .option.correct .opt-letter { background: var(--green); color: #fff; }
+  .option.wrong { border-color: var(--red); background: rgba(239,68,68,0.1); }
+  .option.wrong .opt-letter { background: var(--red); color: #fff; }
   .option.disabled { cursor: not-allowed; }
 
   .feedback-box {
@@ -410,7 +380,6 @@ export function renderHtml(content: string) {
     padding: 0 28px 28px;
   }
 
-  /* ====== RESULT SCREEN ====== */
   #result-screen {
     background: var(--surface);
     border-radius: 24px;
@@ -420,11 +389,7 @@ export function renderHtml(content: string) {
     box-shadow: var(--shadow-lg);
   }
 
-  .result-emoji {
-    font-size: 56px;
-    margin-bottom: 20px;
-    display: block;
-  }
+  .result-emoji { font-size: 56px; margin-bottom: 20px; display: block; }
 
   .result-title {
     font-size: 32px;
@@ -435,11 +400,7 @@ export function renderHtml(content: string) {
     -webkit-text-fill-color: transparent;
   }
 
-  .result-sub {
-    color: var(--muted);
-    margin-bottom: 40px;
-    font-size: 15px;
-  }
+  .result-sub { color: var(--muted); margin-bottom: 40px; font-size: 15px; }
 
   .score-circle {
     width: 160px;
@@ -462,11 +423,7 @@ export function renderHtml(content: string) {
     background: var(--surface);
   }
 
-  .score-inner {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-  }
+  .score-inner { position: relative; z-index: 1; text-align: center; }
 
   .score-pct {
     font-size: 36px;
@@ -476,11 +433,7 @@ export function renderHtml(content: string) {
     display: block;
   }
 
-  .score-frac {
-    font-size: 12px;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-  }
+  .score-frac { font-size: 12px; color: var(--muted); font-family: 'Space Mono', monospace; }
 
   .result-stats {
     display: flex;
@@ -490,9 +443,7 @@ export function renderHtml(content: string) {
     flex-wrap: wrap;
   }
 
-  .rs-item {
-    text-align: center;
-  }
+  .rs-item { text-align: center; }
 
   .rs-val {
     font-size: 26px;
@@ -504,22 +455,10 @@ export function renderHtml(content: string) {
   .rs-val.g { color: var(--green); }
   .rs-val.r { color: var(--red); }
 
-  .rs-label {
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 4px;
-  }
+  .rs-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; }
 
-  .result-btns {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  .result-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-  /* ====== REVIEW SCREEN ====== */
   #review-screen {
     background: var(--surface);
     border-radius: 24px;
@@ -537,10 +476,7 @@ export function renderHtml(content: string) {
     align-items: center;
   }
 
-  .review-header h2 {
-    font-size: 18px;
-    font-weight: 800;
-  }
+  .review-header h2 { font-size: 18px; font-weight: 800; }
 
   .review-list {
     padding: 24px 28px;
@@ -551,11 +487,7 @@ export function renderHtml(content: string) {
     overflow-y: auto;
   }
 
-  .review-item {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-  }
+  .review-item { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
 
   .review-q {
     padding: 14px 18px;
@@ -566,40 +498,17 @@ export function renderHtml(content: string) {
     background: var(--surface2);
   }
 
-  .review-q .rq-num {
-    color: var(--accent);
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    white-space: nowrap;
-  }
+  .review-q .rq-num { color: var(--accent); font-family: 'Space Mono', monospace; font-size: 12px; white-space: nowrap; }
 
-  .review-answers {
-    padding: 12px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .review-answers { padding: 12px 18px; display: flex; flex-direction: column; gap: 6px; }
 
-  .ra-row {
-    font-size: 13px;
-    padding: 6px 10px;
-    border-radius: 8px;
-  }
-
+  .ra-row { font-size: 13px; padding: 6px 10px; border-radius: 8px; }
   .ra-row.your-ans { background: rgba(239,68,68,0.1); color: var(--red); }
   .ra-row.correct-ans { background: rgba(16,185,129,0.1); color: var(--green); }
   .ra-row.same { background: rgba(16,185,129,0.1); color: var(--green); }
 
-  .tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-right: 8px;
-    opacity: 0.7;
-  }
+  .tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-right: 8px; opacity: 0.7; }
 
-  /* scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--surface2); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
@@ -617,12 +526,12 @@ export function renderHtml(content: string) {
 
   <!-- START -->
   <div id="start-screen" class="screen active">
-    <div class="logo">⚡ Quiz Master</div>
+    <div class="logo">&#x26A1; Quiz Master</div>
     <h1>Computer Fundamentals</h1>
     <p class="subtitle">Test your knowledge with 50 randomly selected questions from a bank of 218 unique MCQs.</p>
     <div class="stats-row">
       <div class="stat-item">
-        <span class="stat-num" id="total-q-display">—</span>
+        <span class="stat-num" id="total-q-display">&#x2014;</span>
         <div class="stat-label">Total Questions</div>
       </div>
       <div class="stat-item">
@@ -630,16 +539,16 @@ export function renderHtml(content: string) {
         <div class="stat-label">Per Session</div>
       </div>
       <div class="stat-item">
-        <span class="stat-num" id="best-score-display">—</span>
+        <span class="stat-num" id="best-score-display">&#x2014;</span>
         <div class="stat-label">Best Score</div>
       </div>
     </div>
     <div class="result-btns">
       <button class="btn btn-ghost" onclick="showLeaderboard()">
-        🏆 Leaderboard
+        &#x1F3C6; Leaderboard
       </button>
       <button class="btn btn-primary" onclick="checkNameBeforeStart()">
-        Start Quiz →
+        Start Quiz &#x2192;
       </button>
     </div>
   </div>
@@ -647,18 +556,16 @@ export function renderHtml(content: string) {
   <!-- NAME ENTRY -->
   <div id="name-screen" class="screen">
     <div id="name-card" style="background:var(--surface); padding: 52px 40px; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-lg); text-align: center;">
-      <div class="logo">👤 Identifying</div>
-      <h2>Student Details</h2>
+      <div class="logo">&#x1F464; Identifying</div>
+      <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Student Details</h2>
       <p class="subtitle">Please enter your name to track your progress and enter the global leaderboard.</p>
-      
       <div class="input-group">
         <label class="input-label">Your Full Name</label>
         <input type="text" id="student-name-input" class="input-field" placeholder="e.g. John Doe" maxlength="30">
       </div>
-
       <div style="display: flex; gap: 16px; justify-content: center;">
         <button class="btn btn-ghost" onclick="showScreen('start-screen')">Back</button>
-        <button class="btn btn-primary" onclick="confirmName()">Continue →</button>
+        <button class="btn btn-primary" onclick="confirmName()">Continue &#x2192;</button>
       </div>
     </div>
   </div>
@@ -667,8 +574,8 @@ export function renderHtml(content: string) {
   <div id="leaderboard-screen" class="screen">
     <div style="background:var(--surface); border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-lg); overflow: hidden;">
       <div class="quiz-header" style="justify-content: space-between;">
-        <h2 style="font-size: 20px; font-weight: 800;">🏆 Global Leaderboard</h2>
-        <button class="btn btn-ghost" onclick="showScreen('start-screen')" style="padding: 10px 20px; font-size: 14px;">← Back</button>
+        <h2 style="font-size: 20px; font-weight: 800;">&#x1F3C6; Global Leaderboard</h2>
+        <button class="btn btn-ghost" onclick="showScreen('start-screen')" style="padding: 10px 20px; font-size: 14px;">&#x2190; Back</button>
       </div>
       <div style="padding: 24px 28px;">
         <div id="leaderboard-loading" style="text-align: center; padding: 40px; color: var(--muted);">
@@ -680,7 +587,7 @@ export function renderHtml(content: string) {
         <table class="leaderboard-table" id="leaderboard-list" style="display: none;">
           <thead>
             <tr>
-              <th>Rank & Name</th>
+              <th>Rank &amp; Name</th>
               <th style="text-align: right;">Score</th>
             </tr>
           </thead>
@@ -702,26 +609,24 @@ export function renderHtml(content: string) {
           <div class="progress-fill" id="progress-fill" style="width:2%"></div>
         </div>
       </div>
-      <div class="score-badge" id="live-score">✓ 0</div>
+      <div class="score-badge" id="live-score">&#x2713; 0</div>
     </div>
-
     <div class="quiz-body">
       <div class="q-num" id="q-num-label">Q1</div>
       <div class="q-text" id="q-text"></div>
       <div class="options-grid" id="options-grid"></div>
       <div class="feedback-box" id="feedback-box"></div>
     </div>
-
     <div class="quiz-footer">
       <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" style="display:none">
-        Next →
+        Next &#x2192;
       </button>
     </div>
   </div>
 
   <!-- RESULT -->
   <div id="result-screen" class="screen">
-    <span class="result-emoji" id="result-emoji">🎯</span>
+    <span class="result-emoji" id="result-emoji">&#x1F3AF;</span>
     <div class="result-title" id="result-title">Quiz Complete!</div>
     <div class="result-sub" id="result-sub">Here's how you did</div>
     <div class="score-circle" id="score-circle">
@@ -746,7 +651,7 @@ export function renderHtml(content: string) {
     </div>
     <div class="result-btns">
       <button class="btn btn-ghost" onclick="showReview()">Review Answers</button>
-      <button class="btn btn-primary" onclick="startQuiz()">Play Again →</button>
+      <button class="btn btn-primary" onclick="startQuiz()">Play Again &#x2192;</button>
     </div>
   </div>
 
@@ -754,7 +659,7 @@ export function renderHtml(content: string) {
   <div id="review-screen" class="screen">
     <div class="review-header">
       <h2>Answer Review</h2>
-      <button class="btn btn-ghost" onclick="showResult()" style="padding:10px 20px;font-size:14px">← Back</button>
+      <button class="btn btn-ghost" onclick="showResult()" style="padding:10px 20px;font-size:14px">&#x2190; Back</button>
     </div>
     <div class="review-list" id="review-list"></div>
   </div>
@@ -762,16 +667,16 @@ export function renderHtml(content: string) {
 </div>
 
 <script>
-let ALL_QUESTIONS = [];
-let TOTAL = 50;
-const LETTERS = ['A','B','C','D'];
-const API_URL = ''; // Leave blank for same-origin (Worker)
+var ALL_QUESTIONS = [];
+var TOTAL = 50;
+var LETTERS = ['A','B','C','D'];
+var API_URL = '';
 
-let studentName = localStorage.getItem('cf_student_name') || '';
+var studentName = localStorage.getItem('cf_student_name') || '';
 
 async function initApp() {
   try {
-    const res = await fetch('questions.json');
+    var res = await fetch('questions.json');
     ALL_QUESTIONS = await res.json();
     document.getElementById('total-q-display').textContent = ALL_QUESTIONS.length;
     updateBestDisplay();
@@ -782,11 +687,11 @@ async function initApp() {
 
 initApp();
 
-let sessionQuestions = [];
-let currentIndex = 0;
-let score = 0;
-let userAnswers = [];
-let answered = false;
+var sessionQuestions = [];
+var currentIndex = 0;
+var score = 0;
+var userAnswers = [];
+var answered = false;
 
 function checkNameBeforeStart() {
   if (!studentName) {
@@ -797,8 +702,8 @@ function checkNameBeforeStart() {
 }
 
 function confirmName() {
-  const input = document.getElementById('student-name-input');
-  const val = input.value.trim();
+  var input = document.getElementById('student-name-input');
+  var val = input.value.trim();
   if (val.length < 2) {
     alert('Please enter a valid name (min 2 chars)');
     return;
@@ -810,37 +715,36 @@ function confirmName() {
 
 async function showLeaderboard() {
   showScreen('leaderboard-screen');
-  const loading = document.getElementById('leaderboard-loading');
-  const empty = document.getElementById('leaderboard-empty');
-  const list = document.getElementById('leaderboard-list');
-  const body = document.getElementById('leaderboard-body');
+  var loading = document.getElementById('leaderboard-loading');
+  var empty = document.getElementById('leaderboard-empty');
+  var list = document.getElementById('leaderboard-list');
+  var body = document.getElementById('leaderboard-body');
 
   loading.style.display = 'block';
   empty.style.display = 'none';
   list.style.display = 'none';
 
   try {
-    const res = await fetch(`\${API_URL}/api/leaderboard`);
+    var res = await fetch(API_URL + '/api/leaderboard');
     if (!res.ok) throw new Error('Failed to fetch');
-    const data = await res.json();
+    var data = await res.json();
 
     loading.style.display = 'none';
     if (!data || data.length === 0) {
       empty.style.display = 'block';
     } else {
       body.innerHTML = '';
-      data.forEach((entry, i) => {
-        const row = document.createElement('tr');
-        row.className = `rank-${i + 1}`;
-        row.innerHTML = `
-          <td>
-            <span class="rank-badge">${i + 1}</span>
-            <span>${entry.name}</span>
-          </td>
-          <td style="text-align: right;">
-            <span class="score-val">${entry.score}%</span>
-          </td>
-        `;
+      data.forEach(function(entry, i) {
+        var row = document.createElement('tr');
+        row.className = 'rank-' + (i + 1);
+        row.innerHTML =
+          '<td>' +
+            '<span class="rank-badge">' + (i + 1) + '</span>' +
+            '<span>' + entry.name + '</span>' +
+          '</td>' +
+          '<td style="text-align: right;">' +
+            '<span class="score-val">' + entry.score + '%</span>' +
+          '</td>';
         body.appendChild(row);
       });
       list.style.display = 'table';
@@ -854,7 +758,7 @@ async function showLeaderboard() {
 async function submitScoreToServer(pct) {
   if (!studentName) return;
   try {
-    await fetch(`\${API_URL}/api/score`, {
+    await fetch(API_URL + '/api/score', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: studentName, score: pct })
@@ -865,10 +769,10 @@ async function submitScoreToServer(pct) {
 }
 
 function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
   return a;
 }
@@ -878,12 +782,12 @@ function getBest() {
 }
 
 function saveBest(pct) {
-  const prev = getBest();
-  if (pct > prev) localStorage.setItem('cf_best', pct);
+  var prev = getBest();
+  if (pct > prev) localStorage.setItem('cf_best', String(pct));
 }
 
 function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(function(s) { s.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
 }
 
@@ -899,28 +803,28 @@ function startQuiz() {
 }
 
 function updateBestDisplay() {
-  const b = getBest();
-  document.getElementById('best-score-display').textContent = b ? b + '%' : '—';
+  var b = getBest();
+  document.getElementById('best-score-display').textContent = b ? b + '%' : '\u2014';
 }
 
 function renderQuestion() {
   answered = false;
-  const q = sessionQuestions[currentIndex];
-  const num = currentIndex + 1;
+  var q = sessionQuestions[currentIndex];
+  var num = currentIndex + 1;
 
-  document.getElementById('q-counter').textContent = `Question ${num} of ${TOTAL}`;
-  document.getElementById('progress-fill').style.width = `${(num / TOTAL) * 100}%`;
-  document.getElementById('live-score').textContent = `✓ ${score}`;
-  document.getElementById('q-num-label').textContent = `Q${num}`;
+  document.getElementById('q-counter').textContent = 'Question ' + num + ' of ' + TOTAL;
+  document.getElementById('progress-fill').style.width = ((num / TOTAL) * 100) + '%';
+  document.getElementById('live-score').textContent = '\u2713 ' + score;
+  document.getElementById('q-num-label').textContent = 'Q' + num;
   document.getElementById('q-text').textContent = q.q;
 
-  const grid = document.getElementById('options-grid');
+  var grid = document.getElementById('options-grid');
   grid.innerHTML = '';
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement('button');
+  q.options.forEach(function(opt, i) {
+    var btn = document.createElement('button');
     btn.className = 'option';
-    btn.innerHTML = `<span class="opt-letter">${LETTERS[i]}</span><span>${opt}</span>`;
-    btn.onclick = () => selectAnswer(i);
+    btn.innerHTML = '<span class="opt-letter">' + LETTERS[i] + '</span><span>' + opt + '</span>';
+    btn.onclick = function() { selectAnswer(i); };
     grid.appendChild(btn);
   });
 
@@ -933,31 +837,32 @@ function selectAnswer(chosen) {
   if (answered) return;
   answered = true;
 
-  const q = sessionQuestions[currentIndex];
-  const correct = q.answer;
-  const options = document.querySelectorAll('.option');
+  var q = sessionQuestions[currentIndex];
+  var correct = q.answer;
+  var options = document.querySelectorAll('.option');
 
-  userAnswers.push({ q, chosen });
+  userAnswers.push({ q: q, chosen: chosen });
 
-  options.forEach((btn, i) => {
+  options.forEach(function(btn, i) {
     btn.classList.add('disabled');
     if (i === correct) btn.classList.add('correct');
     else if (i === chosen) btn.classList.add('wrong');
   });
 
-  const fb = document.getElementById('feedback-box');
+  var fb = document.getElementById('feedback-box');
   if (chosen === correct) {
     score++;
-    document.getElementById('live-score').textContent = `✓ ${score}`;
+    document.getElementById('live-score').textContent = '\u2713 ' + score;
     fb.className = 'feedback-box correct-fb show';
-    fb.innerHTML = '✅ Correct! Well done.';
+    fb.innerHTML = '\u2705 Correct! Well done.';
   } else {
     fb.className = 'feedback-box wrong-fb show';
-    fb.innerHTML = `❌ Wrong. Correct answer: <strong>${LETTERS[correct]}. ${q.options[correct]}</strong>`;
+    fb.innerHTML = '\u274C Wrong. Correct answer: <strong>' + LETTERS[correct] + '. ' + q.options[correct] + '</strong>';
   }
 
-  document.getElementById('next-btn').style.display = 'flex';
-  document.getElementById('next-btn').textContent = currentIndex < TOTAL - 1 ? 'Next →' : 'See Results →';
+  var nextBtn = document.getElementById('next-btn');
+  nextBtn.style.display = 'flex';
+  nextBtn.textContent = currentIndex < TOTAL - 1 ? 'Next \u2192' : 'See Results \u2192';
 }
 
 function nextQuestion() {
@@ -971,24 +876,24 @@ function nextQuestion() {
 
 function showResult() {
   showScreen('result-screen');
-  const pct = Math.round((score / TOTAL) * 100);
+  var pct = Math.round((score / TOTAL) * 100);
   saveBest(pct);
   updateBestDisplay();
-  submitScoreToServer(pct); // Global high score submission
+  submitScoreToServer(pct);
 
-  document.getElementById('score-circle').style.setProperty('--pct', `${pct * 3.6}deg`);
+  document.getElementById('score-circle').style.setProperty('--pct', (pct * 3.6) + 'deg');
   document.getElementById('score-pct').textContent = pct + '%';
-  document.getElementById('score-frac').textContent = `${score}/${TOTAL}`;
-  document.getElementById('res-correct').textContent = score;
-  document.getElementById('res-wrong').textContent = TOTAL - score;
+  document.getElementById('score-frac').textContent = score + '/' + TOTAL;
+  document.getElementById('res-correct').textContent = String(score);
+  document.getElementById('res-wrong').textContent = String(TOTAL - score);
   document.getElementById('res-best').textContent = getBest() + '%';
 
-  let emoji, title, sub;
-  if (pct >= 90) { emoji = '🏆'; title = 'Outstanding!'; sub = 'You nailed it — top of the class!'; }
-  else if (pct >= 75) { emoji = '🎯'; title = 'Great Job!'; sub = 'Strong performance — keep it up!'; }
-  else if (pct >= 60) { emoji = '👍'; title = 'Good Effort!'; sub = 'Above average — a little more practice!'; }
-  else if (pct >= 40) { emoji = '📚'; title = 'Keep Studying!'; sub = 'You can do better — review and retry!'; }
-  else { emoji = '💪'; title = "Don't Give Up!"; sub = 'Practice makes perfect — try again!'; }
+  var emoji, title, sub;
+  if (pct >= 90)      { emoji = '\u1F3C6'; title = 'Outstanding!';    sub = 'You nailed it \u2014 top of the class!'; }
+  else if (pct >= 75) { emoji = '\u1F3AF'; title = 'Great Job!';       sub = 'Strong performance \u2014 keep it up!'; }
+  else if (pct >= 60) { emoji = '\u1F44D'; title = 'Good Effort!';     sub = 'Above average \u2014 a little more practice!'; }
+  else if (pct >= 40) { emoji = '\u1F4DA'; title = 'Keep Studying!';   sub = 'You can do better \u2014 review and retry!'; }
+  else                { emoji = '\u1F4AA'; title = "Don't Give Up!";   sub = 'Practice makes perfect \u2014 try again!'; }
 
   document.getElementById('result-emoji').textContent = emoji;
   document.getElementById('result-title').textContent = title;
@@ -997,38 +902,50 @@ function showResult() {
 
 function showReview() {
   showScreen('review-screen');
-  const list = document.getElementById('review-list');
+  var list = document.getElementById('review-list');
   list.innerHTML = '';
 
-  userAnswers.forEach((item, i) => {
-    const { q, chosen } = item;
-    const isCorrect = chosen === q.answer;
+  userAnswers.forEach(function(item, i) {
+    var q = item.q;
+    var chosen = item.chosen;
+    var isCorrect = chosen === q.answer;
 
-    const div = document.createElement('div');
+    var div = document.createElement('div');
     div.className = 'review-item';
 
-    div.innerHTML = `
-      <div class="review-q">
-        <span class="rq-num">Q${i + 1}</span>
-        <span>${q.q}</span>
-      </div>
-      <div class="review-answers">
-        ${isCorrect
-          ? `<div class="ra-row same"><span class="tag">✓ Your Answer</span>${LETTERS[chosen]}. ${q.options[chosen]}</div>`
-          : `<div class="ra-row your-ans"><span class="tag">✗ Your Answer</span>${LETTERS[chosen]}. ${q.options[chosen]}</div>
-             <div class="ra-row correct-ans"><span class="tag">✓ Correct</span>${LETTERS[q.answer]}. ${q.options[q.answer]}</div>`
-        }
-      </div>
-    `;
+    var answersHtml;
+    if (isCorrect) {
+      answersHtml =
+        '<div class="ra-row same">' +
+          '<span class="tag">\u2713 Your Answer</span>' +
+          LETTERS[chosen] + '. ' + q.options[chosen] +
+        '</div>';
+    } else {
+      answersHtml =
+        '<div class="ra-row your-ans">' +
+          '<span class="tag">\u2717 Your Answer</span>' +
+          LETTERS[chosen] + '. ' + q.options[chosen] +
+        '</div>' +
+        '<div class="ra-row correct-ans">' +
+          '<span class="tag">\u2713 Correct</span>' +
+          LETTERS[q.answer] + '. ' + q.options[q.answer] +
+        '</div>';
+    }
+
+    div.innerHTML =
+      '<div class="review-q">' +
+        '<span class="rq-num">Q' + (i + 1) + '</span>' +
+        '<span>' + q.q + '</span>' +
+      '</div>' +
+      '<div class="review-answers">' + answersHtml + '</div>';
+
     list.appendChild(div);
   });
 }
 
-// Init
 updateBestDisplay();
 </script>
 </body>
 </html>
-
 `;
 }
