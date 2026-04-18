@@ -551,6 +551,9 @@ export function renderHtml(content: string) {
         Start Quiz &#x2192;
       </button>
     </div>
+    <div id="change-name-link" style="margin-top: 20px; font-size: 13px; color: var(--muted); cursor: pointer; text-decoration: underline;" onclick="showScreen('name-screen')">
+      Not your name? Change it here.
+    </div>
   </div>
 
   <!-- NAME ENTRY -->
@@ -694,11 +697,9 @@ var userAnswers = [];
 var answered = false;
 
 function checkNameBeforeStart() {
-  if (!studentName) {
-    showScreen('name-screen');
-  } else {
-    startQuiz();
-  }
+  var input = document.getElementById('student-name-input');
+  if (studentName && input) input.value = studentName;
+  showScreen('name-screen');
 }
 
 function confirmName() {
@@ -802,10 +803,6 @@ function startQuiz() {
   updateBestDisplay();
 }
 
-function updateBestDisplay() {
-  var b = getBest();
-  document.getElementById('best-score-display').textContent = b ? b + '%' : '\u2014';
-}
 
 function renderQuestion() {
   answered = false;
@@ -889,15 +886,31 @@ function showResult() {
   document.getElementById('res-best').textContent = getBest() + '%';
 
   var emoji, title, sub;
-  if (pct >= 90)      { emoji = '\u1F3C6'; title = 'Outstanding!';    sub = 'You nailed it \u2014 top of the class!'; }
-  else if (pct >= 75) { emoji = '\u1F3AF'; title = 'Great Job!';       sub = 'Strong performance \u2014 keep it up!'; }
-  else if (pct >= 60) { emoji = '\u1F44D'; title = 'Good Effort!';     sub = 'Above average \u2014 a little more practice!'; }
-  else if (pct >= 40) { emoji = '\u1F4DA'; title = 'Keep Studying!';   sub = 'You can do better \u2014 review and retry!'; }
-  else                { emoji = '\u1F4AA'; title = "Don't Give Up!";   sub = 'Practice makes perfect \u2014 try again!'; }
+  if (pct >= 90)      { emoji = '🏆'; title = 'Outstanding!';    sub = 'You nailed it — top of the class!'; }
+  else if (pct >= 75) { emoji = '🎯'; title = 'Great Job!';       sub = 'Strong performance — keep it up!'; }
+  else if (pct >= 60) { emoji = '👍'; title = 'Good Effort!';     sub = 'Above average — a little more practice!'; }
+  else if (pct >= 40) { emoji = '📚'; title = 'Keep Studying!';   sub = 'You can do better — review and retry!'; }
+  else                { emoji = '💪'; title = "Don't Give Up!";   sub = 'Practice makes perfect — try again!'; }
 
   document.getElementById('result-emoji').textContent = emoji;
   document.getElementById('result-title').textContent = title;
   document.getElementById('result-sub').textContent = sub;
+}
+
+function updateBestDisplay() {
+  var b = getBest();
+  document.getElementById('best-score-display').textContent = b ? b + '%' : '—';
+  
+  // Show/Hide the "Change Name" link based on if a name exists
+  var link = document.getElementById('change-name-link');
+  if (link) {
+    if (studentName) {
+      link.style.display = 'block';
+      link.textContent = 'Playing as ' + studentName + ' (Change)';
+    } else {
+      link.style.display = 'none';
+    }
+  }
 }
 
 function showReview() {
