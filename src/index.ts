@@ -2,7 +2,7 @@ import { renderHtml } from "./renderHtml";
 import { QUESTIONS } from "./questions";
 
 export interface Env {
-    quiz_db: D1Database;
+    DB: D1Database;
 }
 
 export default {
@@ -25,7 +25,7 @@ export default {
         // 3. API: Get Leaderboard Data
         if (url.pathname === "/api/leaderboard" && request.method === "GET") {
             try {
-                const { results } = await env.quiz_db.prepare(
+                const { results } = await env.DB.prepare(
                     "SELECT name, MAX(score) as score FROM scores GROUP BY name ORDER BY score DESC LIMIT 10"
                 ).all();
                 return Response.json(results);
@@ -38,7 +38,7 @@ export default {
         if (url.pathname === "/api/score" && request.method === "POST") {
             try {
                 const { name, score } = await request.json() as { name: string, score: number };
-                await env.quiz_db.prepare("INSERT INTO scores (name, score) VALUES (?, ?)")
+                await env.DB.prepare("INSERT INTO scores (name, score) VALUES (?, ?)")
                     .bind(name, score)
                     .run();
                 return Response.json({ success: true });
