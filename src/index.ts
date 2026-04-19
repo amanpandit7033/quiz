@@ -1,4 +1,5 @@
 import { renderHtml } from "./renderHtml";
+import { renderAdminHtml } from "./renderAdminHtml";
 import { QUESTIONS } from "./questions";
 
 export interface Env {
@@ -13,6 +14,13 @@ export default {
         if (url.pathname === "/" || url.pathname === "/index.html") {
             // Pass an empty string as required by your renderHtml function signature
             return new Response(renderHtml(""), {
+                headers: { "Content-Type": "text/html" },
+            });
+        }
+
+        // 2. Serve the Admin Dashboard
+        if (url.pathname === "/admin") {
+            return new Response(renderAdminHtml(), {
                 headers: { "Content-Type": "text/html" },
             });
         }
